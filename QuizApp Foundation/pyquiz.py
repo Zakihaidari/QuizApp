@@ -44,7 +44,7 @@ class QuizApp:
         # run until the user exits the app
         selection = ""
         while (True):
-            selection = input("Selection")
+            selection = input("Selection? ")
 
             if len(selection) == 0:
                 self.menu_error()
@@ -63,7 +63,7 @@ class QuizApp:
             elif selection[0] == 'L':
                 print('\nAvailibl Quizzes Are: ')
                 # Todo for later
-                print("-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~")
+                print("---------------------------------------------")
                 continue
 
             elif selection[0] == 'T':
