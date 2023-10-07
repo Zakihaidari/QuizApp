@@ -46,11 +46,38 @@ class QuizApp:
         while (True):
             selection = input("Selection")
 
-            if 
+            if len(selection) == 0:
+                self.menu_error()
+                continue
 
+            selection = selection.capitalize()
 
+            if selection[0] == 'E':
+                self.goodbye()
+                break
+
+            elif selection[0] == 'M':
+                self.menu_header()
+                continue
+
+            elif selection[0] == 'L':
+                print('\nAvailibl Quizzes Are: ')
+                # Todo for later
+                print("-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~")
+                continue
+
+            elif selection[0] == 'T':
+                try:
+                    quiznum = int(input("Quiz number: "))
+                    print(f"You have selected quiz {quiznum}")
+                    # TODo
+                except:
+                    self.menu_error()
+            else:
+                self.menu_error()
 
     # This is the entry point to the program
+
     def run(self):
         # Execute the startup routine - ask for name, print greeting, etc
         self.startup()
